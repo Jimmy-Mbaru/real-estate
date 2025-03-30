@@ -10,7 +10,7 @@ public class THE_CONNECTION {
     private static String dbname = "java_rst_db";
     private static String username = "root";
     private static Integer portnumber = 3306;
-    private static String password = "Password123"; // no password
+    private static String password = ""; // no password
 
     // create a function to get the connection
     public static Connection getTheConnection() {
