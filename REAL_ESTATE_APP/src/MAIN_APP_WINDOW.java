@@ -1,5 +1,5 @@
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Objects;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -280,28 +280,53 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
 
 
 // Keep the first definition (from //! Start to //! END)
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
+javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+jPanel1.setLayout(jPanel1Layout);
 
-// Create a new JLabel for the image
-        JLabel jLabel_Image = new JLabel();
-        jLabel_Image.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("images/img_1.png"))));
-        jLabel_Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+// Create a new JLabel for the image with custom scaling
+JLabel jLabel_Image = new JLabel() {
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        ImageIcon icon = (ImageIcon) getIcon();
+        if (icon != null && icon.getImage() != null) {
+            // Scale the image to fit the entire label
+            Graphics2D g2d = (Graphics2D) g.create();
+            g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+                                RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+            g2d.drawImage(icon.getImage(), 0, 0, getWidth(), getHeight(), this);
+            g2d.dispose();
+        }
+    }
+};
+
+// Load the image
+ImageIcon originalIcon = new ImageIcon(Objects.requireNonNull(
+    getClass().getClassLoader().getResource("images/img.png")));
+jLabel_Image.setIcon(originalIcon);
+jLabel_Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+// Add component listener to handle resizing
+jLabel_Image.addComponentListener(new java.awt.event.ComponentAdapter() {
+    public void componentResized(java.awt.event.ComponentEvent evt) {
+        jLabel_Image.repaint();
+    }
+});
 
 // Define the layout for jPanel1
-        jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE))
-        );
+jPanel1Layout.setHorizontalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE))
+);
 
-        jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+jPanel1Layout.setVerticalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+);
 
 
 
