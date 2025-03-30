@@ -15,10 +15,7 @@ import javax.swing.border.Border;
  */
 public class MAIN_APP_WINDOW extends javax.swing.JFrame {
 
-    /**
-     * Running the app
-     * java -jar target/real-estate-app-1.0-SNAPSHOT.jar
-     */
+
     public MAIN_APP_WINDOW() {
         initComponents();
 

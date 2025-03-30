@@ -17,8 +17,8 @@ import javax.swing.border.Border;
  */
 
 /**
- *
- * @author 1BestCsharp
+ * Running the app
+ * java -jar target/real-estate-app-1.0-SNAPSHOT.jar
  */
 public class LOGIN_WINDOW extends javax.swing.JFrame {
 

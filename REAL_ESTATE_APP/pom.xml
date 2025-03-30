@@ -49,7 +49,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>MAIN_APP_WINDOW</mainClass>
+                    <mainClass>LOGIN_WINDOW</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -60,7 +60,7 @@
                     <archive>
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <mainClass>MAIN_APP_WINDOW</mainClass>
+                            <mainClass>LOGIN_WINDOW</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
