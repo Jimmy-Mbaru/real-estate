@@ -1,7 +1,7 @@
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
+import java.util.Objects;
+import javax.swing.*;
 import javax.swing.border.Border;
 
 /*
@@ -11,28 +11,28 @@ import javax.swing.border.Border;
  */
 
 /**
- *
  * @author 1BestCsharp
  */
 public class MAIN_APP_WINDOW extends javax.swing.JFrame {
 
     /**
-     * Creates new form MAIN_APP_WINDOW
+     * Running the app
+     * java -jar target/real-estate-app-1.0-SNAPSHOT.jar
      */
     public MAIN_APP_WINDOW() {
         initComponents();
-        
+
         // set the logo picture
         jLabel_APP_ICO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png")));
-        
+
         // set the logo borders
         Border logo_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.white);
         jLabel_APP_ICO.setBorder(logo_border);
-        
+
         // set border to the app name label
         Border appname_border = BorderFactory.createMatteBorder(0, 0, 3, 0, Color.white);
         jLabel_APP_Name.setBorder(appname_border);
-        
+
         // set border to the menu items
         Border menu_items_border = BorderFactory.createMatteBorder(0, 0, 1, 0, Color.yellow);
         jLabel_Property.setBorder(menu_items_border);
@@ -100,27 +100,27 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
 
         jLabel_APP_Name.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
         jLabel_APP_Name.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_APP_Name.setText("MyAPP");
+        jLabel_APP_Name.setText("R. Estates");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel_APP_ICO, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel_APP_Name, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                .addContainerGap())
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel_APP_ICO, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel_APP_Name, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_APP_ICO, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_APP_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel_APP_ICO, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel_APP_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jLabel_Property.setBackground(new java.awt.Color(102, 102, 102));
@@ -133,9 +133,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyMouseExited(evt);
             }
@@ -151,9 +153,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyTypeMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyTypeMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyTypeMouseExited(evt);
             }
@@ -169,9 +173,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyImagesMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyImagesMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_PropertyImagesMouseExited(evt);
             }
@@ -187,9 +193,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_OwnerMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_OwnerMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_OwnerMouseExited(evt);
             }
@@ -205,9 +213,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_ClientMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_ClientMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_ClientMouseExited(evt);
             }
@@ -223,9 +233,11 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_SaleMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel_SaleMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel_SaleMouseExited(evt);
             }
@@ -234,213 +246,229 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_Property, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel_PropertyType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel_PropertyImages, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel_Owner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel_Client, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel_Sale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel_Property, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_PropertyType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_PropertyImages, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_Owner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_Client, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel_Sale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel_Property, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_PropertyType, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_PropertyImages, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_Owner, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_Client, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel_Sale, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 216, Short.MAX_VALUE))
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel_Property, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_PropertyType, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_PropertyImages, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_Owner, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_Client, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_Sale, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 216, Short.MAX_VALUE))
         );
 
+
+// Keep the first definition (from //! Start to //! END)
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
+
+// Create a new JLabel for the image
+        JLabel jLabel_Image = new JLabel();
+        jLabel_Image.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("images/img_1.png"))));
+        jLabel_Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+// Define the layout for jPanel1
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 806, Short.MAX_VALUE))
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE))
         );
+
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel_Image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+
+
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_PropertyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyMouseEntered
-        
+
         jLabel_Property.setBackground(Color.white);
-        jLabel_Property.setForeground(new Color(102,102,102));
-        
+        jLabel_Property.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_PropertyMouseEntered
 
     private void jLabel_PropertyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyMouseExited
-        
-        jLabel_Property.setBackground(new Color(102,102,102));
+
+        jLabel_Property.setBackground(new Color(102, 102, 102));
         jLabel_Property.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_PropertyMouseExited
 
     private void jLabel_PropertyTypeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyTypeMouseEntered
-        
+
         jLabel_PropertyType.setBackground(Color.white);
-        jLabel_PropertyType.setForeground(new Color(102,102,102));
-        
+        jLabel_PropertyType.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_PropertyTypeMouseEntered
 
     private void jLabel_PropertyTypeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyTypeMouseExited
-        
-        jLabel_PropertyType.setBackground(new Color(102,102,102));
+
+        jLabel_PropertyType.setBackground(new Color(102, 102, 102));
         jLabel_PropertyType.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_PropertyTypeMouseExited
 
     private void jLabel_PropertyImagesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyImagesMouseEntered
-        
+
         jLabel_PropertyImages.setBackground(Color.white);
-        jLabel_PropertyImages.setForeground(new Color(102,102,102));
-        
+        jLabel_PropertyImages.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_PropertyImagesMouseEntered
 
     private void jLabel_PropertyImagesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyImagesMouseExited
-        
-        jLabel_PropertyImages.setBackground(new Color(102,102,102));
+
+        jLabel_PropertyImages.setBackground(new Color(102, 102, 102));
         jLabel_PropertyImages.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_PropertyImagesMouseExited
 
     private void jLabel_OwnerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_OwnerMouseEntered
-        
+
         jLabel_Owner.setBackground(Color.white);
-        jLabel_Owner.setForeground(new Color(102,102,102));
-        
+        jLabel_Owner.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_OwnerMouseEntered
 
     private void jLabel_OwnerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_OwnerMouseExited
-        
-        jLabel_Owner.setBackground(new Color(102,102,102));
+
+        jLabel_Owner.setBackground(new Color(102, 102, 102));
         jLabel_Owner.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_OwnerMouseExited
 
     private void jLabel_ClientMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_ClientMouseEntered
-       
+
         jLabel_Client.setBackground(Color.white);
-        jLabel_Client.setForeground(new Color(102,102,102));
-        
+        jLabel_Client.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_ClientMouseEntered
 
     private void jLabel_ClientMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_ClientMouseExited
-       
-        jLabel_Client.setBackground(new Color(102,102,102));
+
+        jLabel_Client.setBackground(new Color(102, 102, 102));
         jLabel_Client.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_ClientMouseExited
 
     private void jLabel_PropertyTypeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyTypeMouseClicked
-        
+
         // open the property types form
         PROPERTY_TYPE_WINDOW typeform = new PROPERTY_TYPE_WINDOW();
         typeform.setVisible(true);
-        typeform.pack();        
+        typeform.pack();
         typeform.setLocationRelativeTo(null);
         typeform.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_PropertyTypeMouseClicked
 
     private void jLabel_OwnerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_OwnerMouseClicked
-        
+
         // open the property owner form
         OWNER_WINDOW ownerform = new OWNER_WINDOW();
         ownerform.setVisible(true);
-        ownerform.pack();        
+        ownerform.pack();
         ownerform.setLocationRelativeTo(null);
         ownerform.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_OwnerMouseClicked
 
     private void jLabel_ClientMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_ClientMouseClicked
-        
+
         // open the client form
         CLIENT_WINDOW clientform = new CLIENT_WINDOW();
         clientform.setVisible(true);
-        clientform.pack();        
+        clientform.pack();
         clientform.setLocationRelativeTo(null);
         clientform.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_ClientMouseClicked
 
     private void jLabel_PropertyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyMouseClicked
-        
+
         // open the property form
         PROPERTY_WINDOW propertyform = new PROPERTY_WINDOW();
         propertyform.setVisible(true);
-        propertyform.pack();        
+        propertyform.pack();
         propertyform.setLocationRelativeTo(null);
         propertyform.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_PropertyMouseClicked
 
     private void jLabel_PropertyImagesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_PropertyImagesMouseClicked
-        
+
         // open the property images form
         PROPERTY_IMAGES_WINDOW propertyImagesForm = new PROPERTY_IMAGES_WINDOW();
         propertyImagesForm.setVisible(true);
-        propertyImagesForm.pack();        
+        propertyImagesForm.pack();
         propertyImagesForm.setLocationRelativeTo(null);
         propertyImagesForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_PropertyImagesMouseClicked
 
     private void jLabel_SaleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SaleMouseClicked
-        
+
         // open the sale form
         SALE_WINDOW saleForm = new SALE_WINDOW();
         saleForm.setVisible(true);
-        saleForm.pack();        
+        saleForm.pack();
         saleForm.setLocationRelativeTo(null);
         saleForm.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+
     }//GEN-LAST:event_jLabel_SaleMouseClicked
 
     private void jLabel_SaleMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SaleMouseEntered
-      
+
         jLabel_Sale.setBackground(Color.white);
-        jLabel_Sale.setForeground(new Color(102,102,102));
-        
+        jLabel_Sale.setForeground(new Color(102, 102, 102));
+
     }//GEN-LAST:event_jLabel_SaleMouseEntered
 
     private void jLabel_SaleMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SaleMouseExited
-        
-        jLabel_Sale.setBackground(new Color(102,102,102));
+
+        jLabel_Sale.setBackground(new Color(102, 102, 102));
         jLabel_Sale.setForeground(Color.white);
-        
+
     }//GEN-LAST:event_jLabel_SaleMouseExited
 
     /**
@@ -450,7 +478,7 @@ public class MAIN_APP_WINDOW extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
